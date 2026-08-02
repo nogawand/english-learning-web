@@ -3,14 +3,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { ConfigModule } from '@nestjs/config';
 import { AppService } from './app.service';
-import {
-  Letter,
-  Unit,
-  User,
-  UserLetterProgress,
-  UserWordProgress,
-  Word,
-} from './entities';
+import { LettersModule } from './letters/letters.module';
 
 @Module({
   imports: [
@@ -22,6 +15,7 @@ import {
       synchronize: true,
       ssl: true,
     }),
+    LettersModule,
   ],
   controllers: [AppController],
   providers: [AppService],
