@@ -20,7 +20,7 @@ export default function LetterLesson() {
   useEffect(() => {
     const fetchUnitLetters = async () => {
       try {
-        const response = await fetch('https://english-learning-web-jvww.onrender.com/');
+        const response = await fetch('https://english-learning-web-jvww.onrender.com/api/letters/unit/7');
         if (!response.ok) {
           throw new Error(LETTER_TEXTS.SERVER_ERROR + response.status);
         }
