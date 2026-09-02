@@ -4,6 +4,7 @@ import { AppController } from './app.controller';
 import { ConfigModule } from '@nestjs/config';
 import { AppService } from './app.service';
 import { LettersModule } from './letters/letters.module';
+import { UnitsModule } from './units/units.module';
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { LettersModule } from './letters/letters.module';
       ssl: true,
     }),
     LettersModule,
+    UnitsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
